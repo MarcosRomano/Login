@@ -1,0 +1,20 @@
+<div class="row">
+      <div class="card">
+        <ul>
+          <li *ngFor="let use of usuarios">
+            <div class="card-footer">
+              <a
+                [routerLink]="['/usuario']"
+                [queryParams]="{
+                  id:usuario.id,
+                  nombre:usuario.nombre,
+                  password:usuario.password
+                }"
+              >
+                {{use.nombre}}
+          </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
